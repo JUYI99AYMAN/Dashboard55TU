@@ -1,0 +1,50 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2>SLG Company</h2>
+            <h4>example@email.com</h4>
+        </div>
+        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Stg maroc">
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Pages</h2>
+
+    <a mat-list-item  routerLinkActive="list-item-active" routerLink="/dashboard"><mat-icon> bar_chart</mat-icon>Dashboard</a>
+    <div >
+      <a   mat-list-item class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" routerLink="/charges"> 
+        <mat-icon> bar_chart</mat-icon>Charges
+      </a>
+
+
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><button class="dropdown-item" type="button" routerLink="/add-charge" >Ajouter</button></li>
+        <li><button class="dropdown-item" type="button">Something else here</button></li>
+      </ul>
+    </div>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/shipments"><mat-icon>dashboard</mat-icon>Shipmets</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/tracking"><mat-icon> swap_calls</mat-icon>Tracking</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/carriers"><mat-icon>flight_takeoff</mat-icon>Carriers</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/calculate"><mat-icon>reorder</mat-icon>Calculate</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/reports"><mat-icon>assignment_turned_in</mat-icon>Reports</a>
+    
+
+    
+
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Tools</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>import_contacts</mat-icon>
+        Contacts
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/leads">
+        <mat-icon>contact_phone</mat-icon>
+        Leads
+    </a>
+
+</mat-nav-list>

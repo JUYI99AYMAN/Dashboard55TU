@@ -1,0 +1,78 @@
+
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="25">
+        <app-widget-card label="Active Loads" total="12k" percentage="50" ></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Loads This Month" total="10k" percentage="40" ></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Loads Balance" total="8k" percentage="30" ></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Consigners" total="6k" percentage="20" ></app-widget-card>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" >
+    <div fxFlex="100">
+        <table class="table" >
+            <thead class="thead-dark" style="background-color: darkgrey ;">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Truck Number</th>
+                <th scope="col">Driver Name</th>
+                <th scope="col">Driver Phone</th>
+                <th scope="col">Consigner</th>
+                <th scope="col">Load Date</th>
+                <th scope="col">City Frome</th>
+                <th scope="col">City To</th>
+                <th scope="col">Actions</th>
+
+                
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let das of dashboard">
+                <th scope="row">{{ das.id }}</th>
+                <td>{{  das.truckNumber  }}</td>
+                <td>{{ das.driverName }}</td>
+                <td>{{ das.driverPhone }}</td>
+                <td>{{ das.consigner }}</td>
+                <td>{{ das.loadDate }}</td>
+                <td>{{ das.cityFrom }}</td>
+                <td>{{ das.cityTo }}</td>
+                <td><a class="btn btn-success" >Active</a></td>
+
+
+              </tr>
+              
+            </tbody>
+          </table>
+          
+         
+      
+
+    </div>
+    
+</div>
+
+<br>
+           
+
+<br>
+<br>

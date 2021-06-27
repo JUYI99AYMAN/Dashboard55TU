@@ -1,0 +1,45 @@
+<div class="container">
+    <div>
+        <h2>Modifier une charge :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Charge</label>
+            <input type="text" [(ngModel)]="currentCharge.idCharge" name="idCharge" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>STATUS</label>
+            <input type="text" [(ngModel)]="currentCharge.statusCharge" name="statusCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>TRUCK NUMBER</label>
+            <input type="number" [(ngModel)]="currentCharge.truckNumberCharge" name="truckNumberCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ORIGIN</label>
+            <input type="number" [(ngModel)]="currentCharge.originCharge" name="originCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>DELIVERY POINT</label>
+            <input type="number" [(ngModel)]="currentCharge.deliveryPointCharge" name="deliveryPointCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ESTIMATED DATE</label>
+            <input type="number" [(ngModel)]="currentCharge.estimatedPointCharge" name="estimatedPointCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>TOTAL COST</label>
+            <input type="number" [(ngModel)]="currentCharge.costCharge" name="costCharge" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date création</label>
+            <input type="date" [ngModel]="currentCharge.dateCreation | date: 'yyyy-MM-dd'" 
+            (ngModelChange)=" currentCharge.dateCreation= $event" 
+             name="dateCreation" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="updateCharge()" class="btn btn-success">Modifier</button>
+        </div>
+        
+    </form>
+</div>

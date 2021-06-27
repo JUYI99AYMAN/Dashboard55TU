@@ -1,0 +1,47 @@
+<div class="container">
+    <div>
+        <h2>Modifier une charge :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Charge</label>
+            <input type="text" [(ngModel)]="newCharge.idCharge" name="idCharge" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>STATUS</label>
+            <input type="text" [(ngModel)]="newCharge.statusCharge" name="statusCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>TRUCK NUMBER</label>
+            <input type="text" [(ngModel)]="newCharge.truckNumberCharge" name="truckNumberCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ORIGIN</label>
+            <input type="text" [(ngModel)]="newCharge.originCharge" name="originCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>DELIVERY POINT</label>
+            <input type="text" [(ngModel)]="newCharge.deliveryPointCharge" name="deliveryPointCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ESTIMATED DATE</label>
+            <input type="text" [(ngModel)]="newCharge.estimatedPointCharge" name="estimatedPointCharge" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>TOTAL COST</label>
+            <input type="text" [(ngModel)]="newCharge.costCharge" name="costCharge" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date création</label>
+            <input type="date" [ngModel]="newCharge.dateCreation | date: 'yyyy-MM-dd'" 
+            (ngModelChange)=" currentCharge.dateCreation= $event" 
+             name="dateCreation" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="addCharge()" class="btn btn-success">Ajouter</button>
+        </div>
+        <div>
+            <h3>{{ message }}</h3>
+        </div>
+    </form>
+</div>

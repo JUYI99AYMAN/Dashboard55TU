@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>STATUS</th>
+                    <th>TRUCK NUMBER</th>
+                    <th>ORIGIN</th>
+                    <th>DELIVERY POINT</th>
+                    <th>ESTIMATED DATE</th>
+                    <th>TOTAL COST</th>
+                    <th>Date Création</th>
+
+                </tr>
+                <tbody *ngFor="let charge of charges">
+                    <tr>
+                        <td>{{charge.idCharge}}</td>                      
+                        <td>{{charge.statusCharge}}</td>
+                        <td>{{charge.truckNumberCharge}}</td>
+                        <td>{{charge.originCharge}}</td>
+                        <td>{{charge.deliveryPointCharge}}</td>
+                        <td>{{charge.estimatedPointCharge}}</td>
+                        <td>{{charge.costCharge}}</td>
+                        <td>{{charge.dateCreation | date:'dd/MM/yyyy'}}</td>
+                        <td><a class="btn btn-danger" (click)="supprimerCharge(charge)">Supprimer</a></td>
+                        <td><a class="btn btn-success" [routerLink]="['/updateCharge',charge.idCharge]">Modifier</a></td>
+                     </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
